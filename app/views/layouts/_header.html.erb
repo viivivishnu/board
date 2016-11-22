@@ -28,11 +28,11 @@
 
       <%if current_user %>
       <li>   <%= link_to "Settings", edit_user_registration_path %></li>
-        <li>   <%= link_to "Log out", about_path %></li>
+        <li>   <%= link_to "Log out", destroy_user_session_path, method: :delete  %></li>
 
       <% else %>
         <li>   <%= link_to "Log In", new_user_session_path %></li>
-        <li>   <%= link_to "About", destroy_user_session, method: :delete %></li>
+        <li>   <%= link_to "About", about_path %></li>
       <% end %>  
 
         <li class="dropdown">
